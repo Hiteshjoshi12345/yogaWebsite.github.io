@@ -80,7 +80,7 @@ body {
     margin-top: 15px;
   }
 
-  .image1{
+  .Image1{
     position: absolute;
     width: 96%; 
     height: 480px;
@@ -193,12 +193,18 @@ img {
     width: 250px;
     height: 150px;
     padding-right: 60px;
-    
+    margin-bottom: 10px;
 }
 
 .text {
+    font-family: Arquitecta, Helvetica, Arial, sans-serif;
+    color: gray;
+    letter-spacing: 2px;
+    word-spacing: 1px;
+    line-height: 150%;
     width: 250px;
     height: 150px;
+    margin-top: 5px;
 }
 
 .main2 {
