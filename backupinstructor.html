@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap" rel="stylesheet">
+  <style>
+    body{
+      overflow-x: hidden;
+    }
+    html {
+      box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+    .column {
+      float: left;
+      width: 33.3%;
+      margin-bottom: 16px;
+      padding: 0 8px;
+    }
+
+    @media screen and (max-width: 650px) {
+      .column {
+        width: 100%;
+        display: block;
+      }
+
+
+    }
+
+    .image-stack {
+      background-repeat: no-repeat;
+    }
+
+    .img1 {
+      position: absolute;
+      z-index: -1;
+      padding-left: 5px;
+
+    }
+
+    .img2 {
+      position: relative;
+      z-index: 0;
+      width: 100%;
+      margin-left: 70%;
+      padding-top: 50%;
+    }
+
+    .img2 img {
+      border-radius: 50%;
+      border: 5px solid #f9fbfc;
+    }
+
+    .para {
+      display: flex;
+      flex-direction: column;
+      margin: 3% 10%;
+      align-items: center;
+      font-family: 'Comforter Brush', cursive;
+      font-family: 'Lato', sans-serif;
+      font-size: 18px;
+      line-height: 30px;
+      vertical-align: baseline;
+      letter-spacing: 1px;
+      word-spacing: 0px;
+    }
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .container {
+      padding: 0 16px;
+    }
+
+    .container::after,
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .title {
+      color: grey;
+    }
+
+    .button {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: white;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .button:hover {
+      background-color: #555;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .navbar {
+      overflow: hidden;
+    }
+
+    .navbar a {
+      float: left;
+      font-size: 14px;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .dropDown {
+      float: left;
+      overflow: hidden;
+    }
+
+    .dropDown .dropBtn {
+      font-size: 14px;
+      border: none;
+      outline: none;
+      color: black;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .dropdownContent {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdownContent a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdownContent a:hover {
+      background-color: #ddd;
+    }
+
+    .dropDown:hover .dropdownContent {
+      display: block;
+    }
+
+    .redDot {
+      width: 12px;
+      height: 12px;
+      border: none;
+      outline: none;
+      border-radius: 8px;
+      background-color: red;
+    }
+
+    .logo {
+      font-size: 42px;
+      font-family: Berlin Sans FB;
+    }
+
+    .logo1 {
+      font-size: 42px;
+      font-family: Berlin Sans FB;
+    }
+
+    .logoheader {
+      margin-right: 600px;
+    }
+
+    .padding {
+      margin-top: 15px;
+    }
+
+    .footer {
+      width: 100%;
+      height: 200px;
+      background-color: black;
+    }
+
+    .footerbtn1 {
+      width: 250px;
+      height: 50px;
+      font-size: 15px;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+      margin-left: 720px;
+      background-color: #fff;
+      color: black;
+      margin-top: 80px;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .footerbtn2 {
+      width: 150px;
+      height: 50px;
+      outline: none;
+      border: 1px solid white;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 40px;
+      padding-right: 40px;
+      border-radius: 5px;
+      margin-left: 20px;
+      background-color: black;
+      color: white;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .footerbtn1:hover {
+      background-color: rgb(53, 51, 51);
+      color: white;
+    }
+
+    .footerbtn2:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .footer1 {
+      text-align: center;
+      font-size: 15px;
+      margin-bottom: 50px;
+    }
+
+    .footerLinks1 {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .footerLinks2 {
+      margin-top: 30px;
+      font-size: 14px;
+    }
+
+    .footerLinks3 {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="navbar">
+    <a href="index.html" class="logoheader"><span class="logo">alo</span><span class="logo1">moves</span></a>
+    <div class="padding">
+      <div class="dropDown">
+        <button class="dropBtn">EXPLORE
+          <i class="fa fa-angle-down"></i>
+        </button>
+        <div class="dropdownContent">
+          <a href="yoga.html">Yoga</a>
+          <hr>
+          <a>Fitness</a>
+          <hr>
+          <a>Beginner</a>
+          <hr>
+          <a>Membership</a>
+        </div>
+      </div>
+
+      <div class="dropDown">
+        <button class="dropBtn">SHOP
+          <button class="redDot"></button>
+        </button>
+        <div class="dropdownContent">
+          <a>Gear</a>
+          <hr>
+          <a>Clothing</a>
+          <hr>
+          <a>Beauty</a>
+          <hr>
+          <a>Gift Cards</a>
+
+        </div>
+      </div>
+      <a href="signin.html">&nbsp;&nbsp;&nbsp;SIGN IN</a>
+      <a href="contact.html">CONTACT</a>
+
+
+    </div>
+
+
+  </div>
+  <br>
+  <div class="image-stack">
+    <div class="img1">
+      <img src="https://i.ytimg.com/vi/Il6LCL5humo/maxresdefault.jpg" alt="">
+    </div>
+
+    <div class="img2">
+      <img width="300px" height="300px"
+        src="https://hana.fit/wp-content/uploads/2021/09/Briohny-Smyth-Yoga-Teacher-%E2%81%A0Im-going-to-be-honest-I-768x837.jpg"
+        alt="">
+    </div>
+  </div>
+
+  <div class="para">
+    <p> With over 10 years of experience building teacher trainings,
+      online content, festivals, and retreats, Briohny Smyth enjoys
+      serving the global wellness community. Her dedication to yoga
+      as a practice shines through in her signature classes, which
+      blend an invigorating flow with eye-opening alignment instruction.</p>
+    <p>From foundational basics on the architecture of asanas and
+      blending strength and flexibility to advanced clinics on strong
+      inversions, Briohny loves helping practitioners discover the
+      range of their abilities. Beyond the physical practice,
+      she enjoys teaching ways to integrate the mind-body
+      connection into daily life. Whether you are a curious beginner,
+      a serious student, or a seasoned instructor, Briohny’s
+      breadth of content carries depth for every learner.</p>
+
+    <p>Briohny also enjoys interacting with the online community
+      through all platforms to connect with yogis and assess
+      student needs. Her dedicated following is a direct reflection
+      of her understanding of the journey, as well as the care
+      with which she dynamically adapts new content to naturally
+      evolve student growth. Briohny's favorite moments are in helping
+      people find and blend their true values into their practice.
+      Her biggest hope is that we can all do what we love while
+      always remembering to love what we do.</p>
+  </div>
+
+  <br>
+
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="3.jpg" alt="Jane" style="width:100%">
+        <div class="container">
+          <h2>Jane Doe</h2>
+          <p class="title">Beginner yoga instructor & Founder</p>
+          <p>Ashley Galvin is a yoga instructor based in Southern California. She is known around the world for her
+            strength and flexibility, and she constantly inspires others with her yoga practice.</p>
+          <p>shley@yoga.com</p>
+          <p><a class="button" href="tel:+123456789">Call</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <img src="2.jpg" alt="Mike" style="width:100%">
+        <div class="container">
+          <h2>Mike Ross</h2>
+          <p class="title">Beginner yoga instructor & CEO</p>
+          <p>
+            With over 10 years of experience building teacher trainings, online content, festivals, and retreats,
+            Briohny Smyth enjoys serving the global wellness community.</p>
+          <p>rose@yoga.com</p>
+          <p><a class="button" href="tel:+123456789">Call</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <img src="4.jpg" alt="John" style="width:100%">
+        <div class="container">
+          <h2>Emily Sferra</h2>
+          <p class="title">Senior instructor</p>
+          <p>
+            Emily Sferra is a barre instructor and student of acupuncture and herbology who is based in Southern
+            California,she also enjoys serving the global wellness community</p>
+          <p>example@example.com</p>
+          <p><a class="button" href="tel:+123456789">Call</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="img1.jpg" alt="Jane" style="width:100%">
+        <div class="container">
+          <h2>ria</h2>
+          <p class="title">Beginner yoga instructor </p>
+          <p>ria is a yoga instructor based in Southern California. She is known around the world for her strength and
+            flexibility, and she constantly inspires others with her yoga practice.</p>
+          <p>shley@yoga.com</p>
+          <p><a class="button" href="tel:+123456789">Call</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <img src="img2.jpg" alt="Mike" style="width:100%">
+        <div class="container">
+          <h2>Mike </h2>
+          <p class="title">Beginner yoga instructor </p>
+          <p>
+            With over 10 years of experience building teacher trainings, online content, festivals, and retreats,
+            Briohny Smyth enjoys serving the global wellness community.</p>
+          <p>rose@yoga.com</p>
+          <p><a class="button" href="tel:+123456789">Call</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <img src="img3.jpg" alt="John" style="width:100%">
+        <div class="container">
+          <h2>Emma</h2>
+          <p class="title">Senior instructor</p>
+          <p>
+            Emily Sferra is a barre instructor and student of acupuncture and herbology who is based in Southern
+            California,she also enjoys serving the global wellness community</p>
+          <p>example@example.com</p>
+          <p><a class="button" href="tel:+123456789">Call</a></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="img4.jpg" alt="Jane" style="width:100%">
+        <div class="container">
+          <h2>John</h2>
+          <p class="title">Beginner yoga instructor </p>
+          <p> Galvin is a yoga instructor based in Southern California. She is known around the world for her strength
+            and flexibility, and she constantly inspires others with her yoga practice.</p>
+          <p>john@yoga.com</p>
+          <p><a class="button" href="tel:+123456789">Call</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <img src="img5.jpg" alt="Mike" style="width:100%">
+        <div class="container">
+          <h2> Ross</h2>
+          <p class="title">Beginner yoga instructor </p>
+          <p>
+            With over 10 years of experience building teacher trainings, online content, festivals, and retreats,
+            Briohny Smyth enjoys serving the global wellness community.</p>
+          <p>rose@yoga.com</p>
+          <p><a class="button" href="tel:+123456789">Call</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <img src="img6.jpg" alt="John" style="width:100%">
+        <div class="container">
+          <h2>Emminem</h2>
+          <p class="title">Senior instructor</p>
+          <p>
+            Emily Sferra is a barre instructor and student of acupuncture and herbology who is based in Southern
+            California,she also enjoys serving the global wellness community</p>
+          <p>example@example.com</p>
+          <p><a class="button" href="tel:+123456789">Call</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footerContainer">
+      <button class="footerbtn1">
+        START MY FREE TRIAL
+      </button>
+      <span class="footerbtn2">
+        EXPLORE
+      </span>
+
+    </div>
+  </div>
+  <div class="footer1">
+    <div class="footerLinks1">
+      <div style="margin-right: 50px;">
+        FAQ
+      </div>
+      <div style="margin-right: 50px;">
+        <a href="contact.html">
+          CONTACT US</a>
+      </div>
+      <div style="margin-right: 50px;">
+        REFER
+      </div>
+      <div style="margin-right: 50px;">
+        GIFT CARDS
+      </div>
+      <div style="margin-right: 50px;">
+        BLOG
+      </div>
+      <div style="margin-right: 50px;">
+        CAREERS
+      </div>
+      <div style="margin-right: 50px;">
+        ALO YOGA
+      </div>
+    </div>
+    <div class="footerLinks2">
+      © 2021 Alo Moves. All Rights Reserved.
+    </div>
+    <div class="footerLinks3">
+      Terms Privacy
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>

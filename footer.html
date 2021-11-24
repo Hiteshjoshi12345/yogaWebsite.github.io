@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+<style>
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+}
+
+.navbar {
+    overflow: hidden;
+    z-index: 1;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropDown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropDown .dropBtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdownContent a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdownContent a:hover {
+    background-color: #ddd;
+}
+
+.dropDown:hover .dropdownContent {
+    display: block;
+}
+
+.redDot {
+    width: 12px;
+    height: 12px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    background-color: red;
+}
+
+.logo {
+    font-size: 42px;
+    font-family: Berlin Sans FB;
+}
+
+.logo1 {
+    font-size: 42px;
+    font-family: Berlin Sans FB;
+}
+
+.logoheader {
+    margin-right: 550px;
+}
+
+.padding {
+    margin-top: 15px;
+}
+
+
+</style>
+
+
+
+<div class="navbar">
+    <a href="" class="logoheader"><span class="logo">alo</span><span class="logo1">moves</span> </a>
+    <div class="padding">
+        <div class="dropDown">
+            <button class="dropBtn">EXPLORE
+                <i class="fa fa-angle-down"></i>
+            </button>
+            <div class="dropdownContent">
+                <a>Yoga</a>
+                <hr>
+                <a>Fitness</a>
+                <hr>
+                <a>Beginner</a>
+                <hr>
+                <a>Membership</a>
+            </div>
+        </div>
+        <a href="#news">INSTRUCTORS</a>
+        <div class="dropDown">
+            <button class="dropBtn">SHOP
+                <button class="redDot"></button>
+            </button>
+            <div class="dropdownContent">
+                <a>Gear</a>
+                <hr>
+                <a>Clothing</a>
+                <hr>
+                <a>Beauty</a>
+                <hr>
+                <a>Gift Cards</a>
+            </div>
+        </div>
+        <a>SIGN IN</a>
+    </div>
+</div>
+
+</body>
+
+</html>
