@@ -10,9 +10,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap" rel="stylesheet">
   <style>
-    body{
+    body {
       overflow-x: hidden;
     }
+
     html {
       box-sizing: border-box;
     }
@@ -171,15 +172,6 @@
       display: block;
     }
 
-    .redDot {
-      width: 12px;
-      height: 12px;
-      border: none;
-      outline: none;
-      border-radius: 8px;
-      background-color: red;
-    }
-
     .logo {
       font-size: 42px;
       font-family: Berlin Sans FB;
@@ -269,11 +261,41 @@
       margin-top: 10px;
       font-size: 14px;
     }
+
+    .button1 {
+      width: 10px;
+      height: 10px;
+      -webkit-border-radius: 40px;
+      border-radius: 40px;
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+      -webkit-animation: glowing 1300ms infinite;
+      -moz-animation: glowing 1300ms infinite;
+      -o-animation: glowing 1300ms infinite;
+      animation: glowing 1300ms infinite;
+    }
+
+    @-webkit-keyframes glowing {
+      0% {
+        background-color: red;
+        -webkit-box-shadow: 0 0 3px red;
+      }
+
+      50% {
+        background-color: red;
+        -webkit-box-shadow: 0 0 15px red;
+      }
+
+      100% {
+        background-color: red;
+        -webkit-box-shadow: 0 0 3px red;
+      }
+    }
   </style>
 </head>
 
 <body>
-
   <div class="navbar">
     <a href="index.html" class="logoheader"><span class="logo">alo</span><span class="logo1">moves</span></a>
     <div class="padding">
@@ -291,10 +313,11 @@
           <a>Membership</a>
         </div>
       </div>
-
       <div class="dropDown">
         <button class="dropBtn">SHOP
-          <button class="redDot"></button>
+          <span>
+            <div class="button1" href="#"></div>
+          </span>
         </button>
         <div class="dropdownContent">
           <a>Gear</a>
@@ -304,30 +327,23 @@
           <a>Beauty</a>
           <hr>
           <a>Gift Cards</a>
-
         </div>
       </div>
       <a href="signin.html">&nbsp;&nbsp;&nbsp;SIGN IN</a>
       <a href="contact.html">CONTACT</a>
-
-
     </div>
-
-
   </div>
   <br>
   <div class="image-stack">
     <div class="img1">
       <img src="https://i.ytimg.com/vi/Il6LCL5humo/maxresdefault.jpg" alt="">
     </div>
-
     <div class="img2">
       <img width="300px" height="300px"
         src="https://hana.fit/wp-content/uploads/2021/09/Briohny-Smyth-Yoga-Teacher-%E2%81%A0Im-going-to-be-honest-I-768x837.jpg"
         alt="">
     </div>
   </div>
-
   <div class="para">
     <p> With over 10 years of experience building teacher trainings,
       online content, festivals, and retreats, Briohny Smyth enjoys
@@ -353,9 +369,7 @@
       Her biggest hope is that we can all do what we love while
       always remembering to love what we do.</p>
   </div>
-
   <br>
-
   <div class="row">
     <div class="column">
       <div class="card">
@@ -370,7 +384,6 @@
         </div>
       </div>
     </div>
-
     <div class="column">
       <div class="card">
         <img src="2.jpg" alt="Mike" style="width:100%">
@@ -385,7 +398,6 @@
         </div>
       </div>
     </div>
-
     <div class="column">
       <div class="card">
         <img src="4.jpg" alt="John" style="width:100%">
@@ -415,7 +427,6 @@
         </div>
       </div>
     </div>
-
     <div class="column">
       <div class="card">
         <img src="img2.jpg" alt="Mike" style="width:100%">
@@ -430,7 +441,6 @@
         </div>
       </div>
     </div>
-
     <div class="column">
       <div class="card">
         <img src="img3.jpg" alt="John" style="width:100%">
@@ -445,7 +455,6 @@
         </div>
       </div>
     </div>
-
   </div>
   <div class="row">
     <div class="column">
@@ -461,7 +470,6 @@
         </div>
       </div>
     </div>
-
     <div class="column">
       <div class="card">
         <img src="img5.jpg" alt="Mike" style="width:100%">
@@ -476,7 +484,6 @@
         </div>
       </div>
     </div>
-
     <div class="column">
       <div class="card">
         <img src="img6.jpg" alt="John" style="width:100%">
@@ -492,7 +499,6 @@
       </div>
     </div>
   </div>
-
   <div class="footer">
     <div class="footerContainer">
       <button class="footerbtn1">
@@ -501,7 +507,6 @@
       <span class="footerbtn2">
         EXPLORE
       </span>
-
     </div>
   </div>
   <div class="footer1">
@@ -536,9 +541,5 @@
       Terms Privacy
     </div>
   </div>
-
-
-
 </body>
-
 </html>
