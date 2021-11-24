@@ -350,4 +350,34 @@
     bottom: 0;
     width: 100%;
   }
-  
+
+  .button {
+    width: 12px;
+    height: 12px;
+    -webkit-border-radius: 40px;
+    border-radius: 40px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    -webkit-animation: glowing 1300ms infinite;
+    -moz-animation: glowing 1300ms infinite;
+    -o-animation: glowing 1300ms infinite;
+    animation: glowing 1300ms infinite;
+  }
+
+  @-webkit-keyframes glowing {
+    0% {
+      background-color: red;
+      -webkit-box-shadow: 0 0 3px red;
+    }
+
+    50% {
+      background-color: red;
+      -webkit-box-shadow: 0 0 15px red;
+    }
+
+    100% {
+      background-color: red;
+      -webkit-box-shadow: 0 0 3px red;
+    }
+  }
