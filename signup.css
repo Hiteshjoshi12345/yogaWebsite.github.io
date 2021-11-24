@@ -1,0 +1,354 @@
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .navbar {
+    overflow: hidden;
+
+  }
+
+  .navbar a {
+    float: left;
+    font-size: 14px;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  .dropDown {
+    float: left;
+    overflow: hidden;
+  }
+
+  .dropDown .dropBtn {
+    font-size: 14px;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+
+  .dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdownContent a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .dropdownContent a:hover {
+    background-color: #ddd;
+  }
+
+  .dropDown:hover .dropdownContent {
+    display: block;
+  }
+
+  .redDot {
+    width: 12px;
+    height: 12px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    background-color: red;
+  }
+
+  .logo {
+    font-size: 42px;
+    font-family: Berlin Sans FB;
+  }
+
+  .logo1 {
+    font-size: 42px;
+    font-family: Berlin Sans FB;
+  }
+
+  .logoheader {
+    margin-right: 600px;
+  }
+
+  .padding {
+    margin-top: 15px;
+  }
+
+  h2 {
+    font-size: 55px;
+    font-weight: 1000;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1.45px;
+  }
+
+  a {
+    text-decoration: none;
+    color: rgb(87, 87, 204)
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .small {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .split-screen {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+  }
+
+  .left,
+  .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+  }
+
+  .left {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+    background-image: url("https://s3.ap-south-1.amazonaws.com/happyshappy/pins/2019/04/big/d6edd16b9230f6aed2cc010d5571a43d.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+  }
+
+  .right .copy {
+    color: black;
+    text-align: center;
+  }
+
+  .right .copy p {
+    margin: 1.5rem 0;
+    font-size: 0.875rem;
+  }
+
+  .right form {
+    width: 328px;
+  }
+
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="password"] {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid #c4c4c4;
+    padding: 10px;
+    margin-bottom: 1.25rem;
+    font-size: 0.875rem;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .signup-btn {
+    display: block;
+    width: 100%;
+    background: black;
+    color: white;
+    font-weight: 700;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .signup-btn:hover {
+    background: #a5afcc;
+    cursor: pointer;
+  }
+
+
+  .row {
+    display: flex;
+  }
+
+  .fa-instagram {
+    background: #125688;
+    color: rgb(10, 10, 10);
+  }
+
+  .fa-facebook {
+    background: #3B5998;
+    color: rgb(14, 13, 13);
+  }
+
+  .fa-twitter {
+    background: #55ACEE;
+    color: rgb(14, 13, 13);
+  }
+
+  .fa-youtube {
+    background: #bb0000;
+    color: rgb(17, 17, 17);
+  }
+
+  .fa-google {
+    background: #a32d1e;
+    color: rgb(155, 33, 33);
+  }
+
+  .footerLogo {
+    font-size: 42px;
+    font-family: Berlin Sans FB;
+    font-weight: 100;
+  }
+
+  footer {
+    background-color: #f9fbfc;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+    bottom: 0;
+    color: rgb(10, 9, 9)
+  }
+
+  .footer-navigation {
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer-navigation h3 {
+    margin: 0;
+    font: normal 36px Cookie, cursive;
+    margin-bottom: 20px;
+    color: rgb(14, 13, 13)
+  }
+
+  .footer-navigation h3 a {
+    text-decoration: none;
+    color: rgb(3, 3, 3)
+  }
+
+  .footer-navigation h3 span {
+    color: #000000
+  }
+
+  .footer-navigation p.links a {
+    color: rgb(8, 8, 8);
+    text-decoration: none
+  }
+
+  .footer-navigation p.company-name {
+    color: #525355;
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 20px;
+  }
+
+  @media (max-width:767px) {
+    .footer-contacts {
+      margin: 30px;
+    }
+  }
+
+  .footer-contacts {
+    margin-left: 0px;
+  }
+
+  .footer-contacts p {
+    display: inline-block;
+    color: #070707;
+    vertical-align: middle
+  }
+
+  .footer-contacts p a {
+    color: #000000;
+    text-decoration: none
+  }
+
+  .fa.footer-contacts-icon {
+    background-color: #121213;
+    color: rgb(230, 223, 223);
+    font-size: 18px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 38px;
+    margin: 10px 15px 10px 0
+  }
+
+  span.new-line-span {
+    display: block;
+    font-weight: normal;
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2
+  }
+
+  .footer-about {
+    margin-left: 200px;
+  }
+
+  .footer-about h4 {
+    display: block;
+    color: rgb(12, 12, 12);
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px
+  }
+
+  .footer-about p {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0
+  }
+
+  div.social-links {
+    margin-top: 20px;
+    color: rgb(240, 238, 238)
+  }
+
+  .social-links a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #000000;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #fcf3f3;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 5px;
+    margin-bottom: 5px
+  }
+
+  .footer {
+
+    bottom: 0;
+    width: 100%;
+
+  }
