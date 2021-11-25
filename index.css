@@ -573,3 +573,63 @@ iframe {
     }
 }
 
+@import url('https://fonts.googleapis.com/css?family=Codystar:300&display=swap');
+
+#loading {
+  display: absolute;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background: white url("https://i.pinimg.com/originals/cf/53/53/cf5353a44be00b595c15a6bbc38a392d.gif") no-repeat center;
+  animation-duration: 10s;
+  background-position-x: center;
+  background-position-y: top;
+  background-size: 20%;
+}
+
+#loadind::after {
+  animation: 5s infinite;
+}
+
+.neons {
+  margin-top: 20rem;
+  text-align: center;
+}
+
+.neons h1 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes textAnimate {
+  0% {
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset: 20%;
+    fill: hsl(189, 68%, 75%)
+  }
+
+  100% {
+    stroke-dasharray: 50% 0;
+    stroke-dashoffstet: -20%;
+    fill: hsla(189, 68%, 75%, 0%)
+  }
+
+}
+
+@-webkit-keyframes glow {
+  from {
+    color: #fff;
+    text-shadow: 0 0 10px #e92222, 0 0 20px #e92222, 0 0 30px #e92222, 0 0 40px #e92222, 0 0 50px #e92222, 0 0 60px #e92222, 0 0 70px #e92222, 0 0 90px #e92222;
+  }
+
+  to {
+    color: gray;
+    text-shadow: 0 0 20px #e92222, 0 0 30px #e92222, 0 0 40px #e92222, 0 0 50px #e92222, 0 0 60px #e92222, 0 0 70px #e92222, 0 0 80px #e92222, 0 1 90px #e92222;
+  }
+}
+
